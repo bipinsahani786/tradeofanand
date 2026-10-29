@@ -228,10 +228,15 @@
         {{-- 6 Services Modern Grid --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             @foreach($services as $idx => $srv)
-            <div class="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
+            <div class="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative cursor-pointer">
                 
+                {{-- 100% Full Card Clickable Link --}}
+                <a href="{{ route('services.show', $srv['slug']) }}" 
+                   class="absolute inset-0 z-10 block" 
+                   aria-label="View {{ $srv['name'] }} details"></a>
+
                 {{-- Card Visual Header --}}
-                <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
+                <div class="relative aspect-[16/10] overflow-hidden bg-slate-900 pointer-events-none">
                     <img 
                         src="{{ $srv['image'] }}" 
                         alt="{{ $srv['name'] }} – Trade of Anand" 
@@ -257,19 +262,20 @@
                 <div class="p-5 sm:p-7 flex-1 flex flex-col justify-between">
                     <div>
                         <h3 class="font-heading text-lg sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-blue-700 transition-colors">
-                            {{ $srv['name'] }}
+                            <a href="{{ route('services.show', $srv['slug']) }}" class="relative z-20 hover:text-blue-700">
+                                {{ $srv['name'] }}
+                            </a>
                         </h3>
-                        <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed mb-4 sm:mb-6">
+                        <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed mb-4 sm:mb-6 pointer-events-none">
                             {{ $srv['short_desc'] }}
                         </p>
                     </div>
 
                     <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-[#0f2147] group-hover:text-blue-700 transition-colors flex items-center gap-1.5">
+                        <a href="{{ route('services.show', $srv['slug']) }}" class="relative z-20 text-xs font-bold uppercase tracking-wider text-[#0f2147] group-hover:text-blue-700 transition-colors flex items-center gap-1.5">
                             विवरण देखें / View Details
                             <span class="transition-transform group-hover:translate-x-1">→</span>
-                        </span>
-                        <a href="{{ route('services.show', $srv['slug']) }}" class="stretched-link" aria-label="View {{ $srv['name'] }}"></a>
+                        </a>
                     </div>
                 </div>
 
@@ -640,17 +646,29 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-8 space-y-3 sm:space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="lg:col-span-8 space-y-3 sm:space-y-3.5" itemscope itemtype="https://schema.org/FAQPage">
                 @foreach($faqs as $index => $faq)
-                <div class="faq-item bg-[#f8fafc] rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 shadow-sm transition-all hover:border-blue-500" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <button class="w-full flex justify-between items-center text-left font-semibold text-slate-900 bg-transparent border-0 cursor-pointer gap-3 sm:gap-4 group" aria-expanded="false" id="faq-q-{{ $index }}">
-                        <span itemprop="name" class="font-heading text-base sm:text-xl font-bold group-hover:text-blue-700 transition-colors hindi leading-snug">{{ $faq['q'] }}</span>
-                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-blue-50 transition-colors">
-                            <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <div class="faq-item bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-2xs hover:border-blue-300 hover:shadow-sm transition-all duration-200" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="w-full flex justify-between items-center text-left font-semibold text-slate-900 bg-transparent border-0 cursor-pointer gap-3 sm:gap-4 px-5 sm:px-6 py-4 sm:py-5 group" aria-expanded="false" id="faq-q-{{ $index }}">
+                        <div class="flex items-center gap-3.5 min-w-0">
+                            <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-xl bg-blue-50 text-blue-800 font-heading font-extrabold text-xs sm:text-sm flex items-center justify-center shrink-0 group-hover:bg-[#0f2147] group-hover:text-amber-400 transition-colors shadow-2xs">
+                                Q{{ $index + 1 }}
+                            </span>
+                            <span itemprop="name" class="font-heading text-base sm:text-lg font-bold group-hover:text-blue-700 transition-colors hindi leading-snug">{{ $faq['q'] }}</span>
+                        </div>
+                        <div class="faq-toggle-icon w-8 h-8 rounded-full bg-slate-100 group-hover:bg-blue-50 text-slate-500 group-hover:text-blue-700 flex items-center justify-center shrink-0 transition-all duration-300 shadow-2xs">
+                            <svg class="faq-icon w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+                            </svg>
                         </div>
                     </button>
-                    <div class="faq-answer pt-3 sm:pt-4 text-xs sm:text-base text-slate-600 leading-relaxed hindi border-t border-slate-200/80 mt-3 sm:mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text" class="m-0">{{ $faq['a'] }}</p>
+                    <div class="faq-answer px-5 sm:px-6 text-xs sm:text-base text-slate-600 leading-relaxed hindi" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div class="pt-3 pb-5 border-t border-slate-100 flex items-start gap-3">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-800 font-bold text-[0.7rem] uppercase shrink-0 mt-0.5">
+                                उत्तर
+                            </span>
+                            <p itemprop="text" class="m-0 text-slate-700 text-sm sm:text-base leading-relaxed">{{ $faq['a'] }}</p>
+                        </div>
                     </div>
                 </div>
                 @endforeach
@@ -659,6 +677,32 @@
         </div>
     </div>
 </section>
+
+{{-- FAQ Style Block --}}
+<style>
+    .faq-item--open {
+        border-color: #2563eb !important;
+        box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.08) !important;
+    }
+    .faq-item--open .faq-toggle-icon {
+        background-color: #0f2147 !important;
+        color: #f59e0b !important;
+    }
+    .faq-item--open .faq-icon {
+        transform: rotate(45deg);
+        color: #f59e0b !important;
+    }
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+    }
+    .faq-item--open .faq-answer {
+        max-height: 800px;
+        opacity: 1;
+    }
+</style>
 
 {{-- Marquee Continuous CSS --}}
 <style>
