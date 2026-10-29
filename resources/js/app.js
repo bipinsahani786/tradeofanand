@@ -117,6 +117,7 @@ function initGallery() {
     const lightbox        = document.getElementById('lightbox');
     const lightboxImg     = document.getElementById('lightbox-img');
     const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.getElementById('lightbox-counter');
     const lightboxClose   = document.getElementById('lightbox-close');
     const lightboxPrev    = document.getElementById('lightbox-prev');
     const lightboxNext    = document.getElementById('lightbox-next');
@@ -129,11 +130,11 @@ function initGallery() {
 
                 // Update active tab styles
                 filterTabs.forEach(t => {
-                    t.classList.remove('bg-[var(--color-primary)]', 'text-white');
-                    t.classList.add('text-[var(--color-text)]');
+                    t.classList.remove('bg-[var(--color-primary)]', 'text-white', 'bg-[#0f2147]', 'border-[#0f2147]', 'filter-tab--active');
+                    t.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
                 });
-                tab.classList.add('bg-[var(--color-primary)]', 'text-white');
-                tab.classList.remove('text-[var(--color-text)]');
+                tab.classList.add('bg-[#0f2147]', 'text-white', 'border-[#0f2147]', 'filter-tab--active');
+                tab.classList.remove('bg-white', 'text-slate-700', 'border-slate-200');
 
                 let visibleCount = 0;
                 galleryItems.forEach(item => {
@@ -181,6 +182,7 @@ function initGallery() {
             lightboxImg.src = src;
             lightboxImg.alt = caption;
             if (lightboxCaption) lightboxCaption.textContent = caption;
+            if (lightboxCounter) lightboxCounter.textContent = `${currentIndex + 1} / ${currentVisibleItems.length}`;
         }
 
         function openLightbox(item) {

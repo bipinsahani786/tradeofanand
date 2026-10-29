@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hi" class="overflow-x-hidden max-w-full w-full">
+<html lang="hi" class="overflow-x-clip max-w-full w-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 </head>
-<body class="font-body text-[var(--color-text)] bg-white antialiased overflow-x-hidden w-full max-w-full pb-14 lg:pb-0">
+<body class="font-body text-[var(--color-text)] bg-white antialiased overflow-x-clip w-full max-w-full pb-14 lg:pb-0">
 
     {{-- Header (includes top announcement bar) --}}
     @include('partials.header')
