@@ -3,103 +3,89 @@
 @section('content')
 
 {{-- ═══════════════════════════════════════════════════════════
-     1. HERO SECTION — Ultra-Modern Dark Luxury / Tech Prestige
-     Inspired by smartindiadetective.in & skinfrareal.com
+     1. HERO SECTION — Clean, Elegant Executive Light Theme
+     Inspired by skinfrareal.com & Modern Corporate Portals
 ═══════════════════════════════════════════════════════════ --}}
-<section class="relative overflow-hidden bg-gradient-to-br from-[#040814] via-[#091224] to-[#040711] min-h-[92vh] flex flex-col justify-center text-white border-b border-slate-800/80">
+<section class="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-slate-50/80 py-16 sm:py-20 lg:py-24 border-b border-slate-200">
 
-    {{-- Cyber Grid & Ambient Glowing Orbs --}}
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-        {{-- Vector Grid --}}
-        <svg class="absolute inset-0 w-full h-full opacity-[0.05]" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <pattern id="hero-cyber-grid" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
-                    <path d="M 50 0 L 0 0 0 50" fill="none" stroke="#ffffff" stroke-width="0.8"/>
-                </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#hero-cyber-grid)"/>
-        </svg>
+    {{-- Subtle Ambient Glows (Light & Airy - Desktop only to protect mobile viewport) --}}
+    <div class="hidden sm:block absolute top-0 right-0 w-[500px] h-[500px] bg-blue-100/40 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
+    <div class="hidden sm:block absolute bottom-0 left-0 w-[500px] h-[500px] bg-amber-100/40 rounded-full blur-[120px] pointer-events-none" aria-hidden="true"></div>
 
-        {{-- Glowing Orbs --}}
-        <div class="absolute -top-32 -left-32 w-[600px] h-[600px] rounded-full bg-blue-600/15 blur-[140px]"></div>
-        <div class="absolute -bottom-40 -right-20 w-[550px] h-[550px] rounded-full bg-amber-500/15 blur-[130px]"></div>
-        <div class="absolute top-1/2 left-1/3 -translate-y-1/2 w-[700px] h-[350px] rounded-full bg-cyan-600/10 blur-[120px]"></div>
-    </div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 pt-16 pb-12 lg:py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
 
             {{-- ── Left Content Column (7 cols) ── --}}
             <div class="lg:col-span-7">
 
-                {{-- Live Radar Trust Pill --}}
-                <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gradient-to-r from-white/10 to-white/5 border border-amber-400/30 backdrop-blur-md mb-6 shadow-[0_0_20px_rgba(245,158,11,0.15)]">
-                    <span class="relative flex h-2.5 w-2.5">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-400"></span>
+                {{-- Trust Pill --}}
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-[#0f2147] mb-5 shadow-sm max-w-full">
+                    <span class="relative flex h-2 w-2 shrink-0">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-500 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                     </span>
-                    <span class="text-xs font-extrabold tracking-wider uppercase text-amber-300">ESTD. 2011</span>
-                    <span class="text-white/30">|</span>
-                    <span class="text-xs font-semibold text-slate-200">Samastipur's Premier Business Group</span>
+                    <span class="text-[0.68rem] sm:text-xs font-extrabold tracking-wider uppercase text-blue-900 shrink-0">Estd. 2011</span>
+                    <span class="text-slate-300">|</span>
+                    <span class="text-[0.68rem] sm:text-xs font-semibold text-slate-700 truncate">Samastipur's Premier Group</span>
                 </div>
 
-                {{-- Bold High-Impact Headline --}}
-                <h1 class="font-heading text-4xl sm:text-6xl lg:text-[4rem] font-extrabold text-white leading-[1.08] tracking-tight mb-5">
+                {{-- Bold High-Contrast Heading --}}
+                <h1 class="font-heading text-3xl sm:text-5xl lg:text-[3.6rem] font-extrabold text-slate-900 leading-[1.16] tracking-tight mb-4 sm:mb-5">
                     विश्वास, सुरक्षा और सेवा का <br class="hidden sm:inline">
-                    <span class="bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-500 bg-clip-text text-transparent drop-shadow-sm">
+                    <span class="bg-gradient-to-r from-blue-700 via-indigo-800 to-amber-600 bg-clip-text text-transparent">
                         विश्वसनीय संस्थान
                     </span>
                 </h1>
 
-                <p class="text-lg sm:text-xl font-semibold text-amber-300/95 mb-4 hindi">
+                <p class="text-base sm:text-xl font-bold text-amber-700 mb-3 sm:mb-4 hindi">
                     {{ config('site.tagline_hindi') }}
                 </p>
 
-                <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-2xl hindi leading-relaxed">
+                <p class="text-sm sm:text-lg text-slate-600 mb-6 sm:mb-8 max-w-2xl hindi leading-relaxed">
                     {{ config('site.description') }}
                 </p>
 
-                {{-- Action Buttons (High-Conversion CTAs) --}}
-                <div class="flex flex-wrap items-center gap-4 mb-10">
+                {{-- High-Conversion CTAs --}}
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-10">
                     <a href="tel:+91{{ config('site.phone_primary') }}"
-                       class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-slate-950 font-heading font-extrabold text-sm tracking-wide shadow-[0_0_25px_rgba(245,158,11,0.35)] transition-all transform hover:-translate-y-0.5"
+                       class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#0f2147] hover:bg-[#1a3875] text-white font-heading font-bold text-sm tracking-wide shadow-lg shadow-blue-950/20 transition-all transform hover:-translate-y-0.5 text-center w-full sm:w-auto"
                        id="hero-call">
                         <svg class="w-4 h-4 shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.99 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.92 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                         </svg>
-                        तुरंत कॉल करें (+91 {{ config('site.phone_primary') }})
+                        <span>तुरंत कॉल करें (+91 {{ config('site.phone_primary') }})</span>
                     </a>
 
                     <a href="https://wa.me/{{ config('site.whatsapp_number') }}?text={{ urlencode(config('site.whatsapp_message')) }}"
-                       class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white font-heading font-bold text-sm tracking-wide shadow-[0_0_25px_rgba(16,185,129,0.3)] transition-all transform hover:-translate-y-0.5"
+                       class="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-3.5 rounded-xl bg-[#16a34a] hover:bg-[#15803d] text-white font-heading font-bold text-sm tracking-wide shadow-lg shadow-emerald-600/20 transition-all transform hover:-translate-y-0.5 text-center w-full sm:w-auto"
                        target="_blank" rel="noopener noreferrer" id="hero-wa">
                         <svg class="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                             <path d="M11.976 0C5.374 0 0 5.374 0 11.976c0 2.107.549 4.092 1.508 5.818L0 24l6.348-1.484A11.93 11.93 0 0 0 11.976 24c6.602 0 11.976-5.374 11.976-11.976S18.578 0 11.976 0zm0 21.818a9.808 9.808 0 0 1-4.999-1.369l-.358-.213-3.767.881.896-3.656-.234-.378A9.8 9.8 0 0 1 2.182 11.976c0-5.405 4.399-9.794 9.794-9.794 5.405 0 9.794 4.389 9.794 9.794 0 5.395-4.389 9.842-9.794 9.842z"/>
                         </svg>
-                        WhatsApp करें
+                        <span>WhatsApp करें</span>
                     </a>
 
                     <a href="{{ route('services.index') }}"
-                       class="inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl border border-white/20 hover:border-amber-400 text-white hover:text-amber-300 font-heading font-semibold text-sm backdrop-blur-md transition-all hover:bg-white/5"
+                       class="inline-flex items-center justify-center gap-1.5 px-5 sm:px-6 py-3.5 rounded-xl bg-white border-2 border-slate-300 hover:border-blue-700 text-slate-800 hover:text-blue-700 font-heading font-bold text-sm shadow-sm transition-all text-center w-full sm:w-auto"
                        id="hero-services">
-                        6 प्रमुख सेवाएँ देखें →
+                        <span>6 प्रमुख सेवाएँ देखें →</span>
                     </a>
                 </div>
 
-                {{-- Fast Micro Highlights --}}
-                <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80">
-                    <div>
-                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold">Location</div>
-                        <div class="text-sm font-semibold text-white">Mushrigharari, Samastipur</div>
+                {{-- Micro Highlights (Responsive Stack on Mobile, 3-col on sm+) --}}
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-slate-200">
+                    <div class="p-3 sm:p-0 rounded-xl sm:rounded-none bg-slate-50/80 sm:bg-transparent border sm:border-0 border-slate-100">
+                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold mb-0.5">Location</div>
+                        <div class="text-sm font-bold text-slate-800 truncate">Mushrigharari, Samastipur</div>
                     </div>
-                    <div>
-                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold">Network</div>
-                        <div class="text-sm font-semibold text-white">All Bihar & Inter-District</div>
+                    <div class="p-3 sm:p-0 rounded-xl sm:rounded-none bg-slate-50/80 sm:bg-transparent border sm:border-0 border-slate-100">
+                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold mb-0.5">Network</div>
+                        <div class="text-sm font-bold text-slate-800 truncate">All Bihar & Inter-District</div>
                     </div>
-                    <div>
-                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold">Services</div>
-                        <div class="text-sm font-semibold text-white">6 Specialized Verticals</div>
+                    <div class="p-3 sm:p-0 rounded-xl sm:rounded-none bg-slate-50/80 sm:bg-transparent border sm:border-0 border-slate-100">
+                        <div class="text-[0.68rem] uppercase tracking-wider text-slate-400 font-bold mb-0.5">Services</div>
+                        <div class="text-sm font-bold text-slate-800 truncate">6 Specialized Verticals</div>
                     </div>
                 </div>
 
@@ -109,47 +95,48 @@
             <div class="lg:col-span-5 relative">
                 <div class="relative mx-auto max-w-md lg:max-w-none">
                     
-                    {{-- Ambient Glow Backdrop --}}
-                    <div class="absolute -inset-3 bg-gradient-to-tr from-amber-500/20 via-blue-600/25 to-cyan-400/20 rounded-3xl blur-2xl"></div>
+                    {{-- Clean Shadow Backdrop --}}
+                    <div class="absolute -inset-2 bg-gradient-to-tr from-blue-600/10 via-amber-500/10 to-indigo-600/10 rounded-3xl blur-xl"></div>
 
-                    {{-- Image Container Card --}}
-                    <div class="relative rounded-2xl overflow-hidden border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.6)] bg-slate-900 group">
-                        <img
-                            src="/images/hero/hero-main.jpg"
-                            alt="Trade of Anand – Multi Sector Enterprise in Samastipur Bihar"
-                            class="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
-                            width="600" height="450"
-                            loading="eager"
-                        >
-                        {{-- Dark Gradient Overlay --}}
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#040814]/90 via-transparent to-transparent opacity-80"></div>
+                    {{-- Image Card Container --}}
+                    <div class="relative rounded-2xl overflow-hidden border border-slate-200/90 shadow-2xl bg-white p-2 group">
+                        <div class="rounded-xl overflow-hidden aspect-[4/3] relative bg-slate-100">
+                            <img
+                                src="/images/services/about-team.jpg"
+                                alt="Trade of Anand – Multi Sector Enterprise in Samastipur Bihar"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                width="600" height="450"
+                                loading="eager"
+                            >
+                            <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
 
-                        {{-- Floating Verified Badge Strip on Image --}}
-                        <div class="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-[#091224]/85 backdrop-blur-xl border border-white/20 shadow-xl flex items-center justify-between">
-                            <div class="flex items-center gap-3">
-                                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center font-bold text-lg shadow-md">
-                                    ★
+                            {{-- Bottom Verified Card on Image --}}
+                            <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-white/95 backdrop-blur-md border border-white/80 shadow-lg flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-9 h-9 rounded-lg bg-[#0f2147] text-amber-400 flex items-center justify-center font-bold text-base shadow-sm shrink-0">
+                                        ★
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-slate-900">Govt Authorized & ISO Standards</div>
+                                        <div class="text-[0.7rem] text-slate-500 hindi">पारदर्शिता और समयबद्ध विश्वसनीयता</div>
+                                    </div>
                                 </div>
-                                <div>
-                                    <div class="text-xs font-bold text-white">Govt Authorized & ISO Standard</div>
-                                    <div class="text-[0.72rem] text-slate-300 hindi">पारदर्शिता और समयबद्ध विश्वसनीयता</div>
-                                </div>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[0.65rem] font-bold uppercase shrink-0">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Verified
+                                </span>
                             </div>
-                            <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-[0.68rem] font-bold uppercase">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Verified
-                            </span>
                         </div>
                     </div>
 
-                    {{-- Floating Modern Stat Badges --}}
-                    <div class="absolute -top-5 -right-5 bg-[#091224]/95 text-white rounded-2xl shadow-2xl p-4 min-w-[120px] text-center border border-amber-500/30 backdrop-blur-xl hidden sm:block animate-float">
-                        <div class="font-heading text-2xl font-extrabold text-amber-400">15+</div>
-                        <div class="text-[0.65rem] text-slate-300 font-bold uppercase tracking-wide">Years Trust</div>
+                    {{-- Floating Stat Badges (Clean White Glass) --}}
+                    <div class="absolute -top-4 -right-4 bg-white text-slate-900 rounded-2xl shadow-xl p-3.5 min-w-[110px] text-center border border-slate-200/80 hidden sm:block animate-float">
+                        <div class="font-heading text-2xl font-extrabold text-[#0f2147]">15+</div>
+                        <div class="text-[0.65rem] text-slate-500 font-bold uppercase tracking-wide">Years Trust</div>
                     </div>
 
-                    <div class="absolute -bottom-5 -left-5 bg-[#091224]/95 text-white rounded-2xl shadow-2xl p-4 min-w-[120px] text-center border border-blue-500/30 backdrop-blur-xl hidden sm:block animate-float" style="animation-delay:0.5s">
-                        <div class="font-heading text-2xl font-extrabold text-blue-400">6</div>
-                        <div class="text-[0.65rem] text-slate-300 font-bold uppercase tracking-wide">Key Verticals</div>
+                    <div class="absolute -bottom-4 -left-4 bg-white text-slate-900 rounded-2xl shadow-xl p-3.5 min-w-[110px] text-center border border-slate-200/80 hidden sm:block animate-float" style="animation-delay:0.5s">
+                        <div class="font-heading text-2xl font-extrabold text-blue-700">6</div>
+                        <div class="text-[0.65rem] text-slate-500 font-bold uppercase tracking-wide">Key Verticals</div>
                     </div>
 
                 </div>
@@ -160,49 +147,53 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════════
-     2. CONTINUOUS PARTNER & CREDIBILITY TICKER STRIP
+     2. CONTINUOUS PARTNER & CREDIBILITY TICKER (Light Theme)
 ═══════════════════════════════════════════════════════════ --}}
-<div class="bg-[#0b1325] border-y border-slate-800 py-3.5 overflow-hidden">
-    <div class="marquee-track flex gap-12 whitespace-nowrap text-xs font-bold uppercase tracking-widest text-slate-300">
-        <span class="inline-flex items-center gap-2"><span class="text-amber-400">★</span> Apollo Tyres Authorized Partner</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-emerald-400">★</span> All Bihar Poultry Integration Logistics</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-blue-400">★</span> Govt Authorized Vehicle PUC Centre</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-amber-400">★</span> Anand Bhavan Prime Commercial Rental</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-cyan-400">★</span> Anand Medicine Wholesale Pharmacy</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-emerald-400">★</span> Complete Health & Motor Insurance Advisory</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-amber-400">★</span> 15+ Years of Proven Business Excellence</span>
-        <span class="text-slate-600">·</span>
+<div class="w-full max-w-full overflow-hidden bg-slate-100/90 border-b border-slate-200 py-2.5 sm:py-3.5 select-none" style="overflow: hidden; contain: paint layout; width: 100%;">
+    <div class="marquee-track flex gap-6 sm:gap-12 whitespace-nowrap text-[0.7rem] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-slate-700">
+        <span class="inline-flex items-center gap-2"><span class="text-amber-600">★</span> Apollo Tyres Authorized Partner</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-emerald-600">★</span> All Bihar Poultry Integration Logistics</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-blue-600">★</span> Govt Authorized Vehicle PUC Centre</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-amber-600">★</span> Anand Bhavan Prime Commercial Rental</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-indigo-600">★</span> Anand Medicine Wholesale Pharmacy</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-emerald-600">★</span> Complete Health & Motor Insurance Advisory</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-amber-600">★</span> 15+ Years of Dedicated Service in Samastipur</span>
+        <span class="text-slate-400">·</span>
         {{-- Duplicate for seamless loop --}}
-        <span class="inline-flex items-center gap-2"><span class="text-amber-400">★</span> Apollo Tyres Authorized Partner</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-emerald-400">★</span> All Bihar Poultry Integration Logistics</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-blue-400">★</span> Govt Authorized Vehicle PUC Centre</span>
-        <span class="text-slate-600">·</span>
-        <span class="inline-flex items-center gap-2"><span class="text-amber-400">★</span> Anand Bhavan Prime Commercial Rental</span>
+        <span class="inline-flex items-center gap-2"><span class="text-amber-600">★</span> Apollo Tyres Authorized Partner</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-emerald-600">★</span> All Bihar Poultry Integration Logistics</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-blue-600">★</span> Govt Authorized Vehicle PUC Centre</span>
+        <span class="text-slate-400">·</span>
+        <span class="inline-flex items-center gap-2"><span class="text-amber-600">★</span> Anand Bhavan Prime Commercial Rental</span>
     </div>
 </div>
 
 {{-- ═══════════════════════════════════════════════════════════
-     3. KEY METRICS STRIP (Stat Counters with Elevation)
+     3. KEY METRICS STRIP (Stat Counters with Clean White Card)
 ═══════════════════════════════════════════════════════════ --}}
-<div class="relative z-20 py-8 bg-[#f8fafc] border-b border-slate-200">
-    <div class="max-w-6xl mx-auto px-6">
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200/80 p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 divide-y lg:divide-y-0 lg:divide-x divide-slate-100">
+<div class="relative z-20 py-6 sm:py-10 bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-3 sm:px-6">
+        <div class="bg-slate-50/90 rounded-2xl border border-slate-200/90 p-3 sm:p-6 md:p-8 grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-6 shadow-sm">
             @foreach($stats as $i => $stat)
-            <div class="text-center pt-4 lg:pt-0 relative group">
-                <span class="count-up block font-heading text-4xl sm:text-5xl font-extrabold text-[#0f2147] group-hover:text-amber-500 transition-colors leading-none mb-1">
+            <div class="text-center p-2.5 sm:p-4 rounded-xl bg-white border border-slate-100 sm:border-0 sm:bg-transparent shadow-xs sm:shadow-none group overflow-hidden">
+                <span class="count-up block font-heading text-2xl sm:text-4xl md:text-5xl font-extrabold text-[#0f2147] group-hover:text-blue-700 transition-colors leading-none mb-1 truncate">
                     {{ $stat['value'] }}
                 </span>
-                <span class="block text-sm font-bold text-slate-900 hindi">{{ $stat['label'] }}</span>
+                <span class="block text-[0.72rem] sm:text-sm font-bold text-slate-900 hindi leading-tight">
+                    {{ $stat['label'] }}
+                </span>
                 @if(!empty($stat['sublabel']))
-                <span class="block text-xs text-slate-500 mt-1">{{ $stat['sublabel'] }}</span>
+                <span class="block text-[0.62rem] sm:text-xs text-slate-500 mt-1 truncate">
+                    {{ $stat['sublabel'] }}
+                </span>
                 @endif
             </div>
             @endforeach
@@ -212,19 +203,18 @@
 
 {{-- ═══════════════════════════════════════════════════════════
      4. SERVICES OVERVIEW (The Direct Advantage Grid)
-     Inspired by skinfrareal.com & smartindiadetective.in
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-[#f8fafc] relative">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-[#f8fafc] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {{-- Section Header --}}
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
             <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-600 text-xs font-bold tracking-widest uppercase mb-3">
-                    Our Comprehensive Portfolio
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
+                    Our Business Verticals
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
-                    हमारी प्रमुख सेवाएँ <span class="text-[#0f2147]">/ Business Verticals</span>
+                    हमारी प्रमुख सेवाएँ <span class="text-[#0f2147]">/ Core Divisions</span>
                 </h2>
                 <p class="text-slate-600 max-w-2xl mt-3 text-base sm:text-lg hindi leading-relaxed">
                     एक छत के नीचे Transport, Insurance, Medicine Wholesale, Commercial Space Rental, Apollo Tyres, और Govt Authorized PUC Testing की सम्पूर्ण सुविधा।
@@ -238,7 +228,7 @@
         {{-- 6 Services Modern Grid --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($services as $idx => $srv)
-            <div class="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-amber-400/50 transition-all duration-300 relative">
+            <div class="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
                 
                 {{-- Card Visual Header --}}
                 <div class="relative aspect-[16/10] overflow-hidden bg-slate-900">
@@ -248,7 +238,7 @@
                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-108"
                         loading="lazy"
                     >
-                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-75 group-hover:opacity-50 transition-opacity"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-70 group-hover:opacity-50 transition-opacity"></div>
                     
                     {{-- Index Number Tag --}}
                     <div class="absolute top-4 left-4 px-3 py-1 rounded-md bg-white/95 backdrop-blur-md text-[#0f2147] font-heading font-extrabold text-xs shadow-sm">
@@ -266,7 +256,7 @@
                 {{-- Card Content --}}
                 <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
                     <div>
-                        <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-[#0f2147] transition-colors">
+                        <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
                             {{ $srv['name'] }}
                         </h3>
                         <p class="text-sm text-slate-600 hindi leading-relaxed mb-6">
@@ -275,7 +265,7 @@
                     </div>
 
                     <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
-                        <span class="text-xs font-bold uppercase tracking-wider text-[#0f2147] group-hover:text-amber-600 transition-colors flex items-center gap-1.5">
+                        <span class="text-xs font-bold uppercase tracking-wider text-[#0f2147] group-hover:text-blue-700 transition-colors flex items-center gap-1.5">
                             विवरण देखें / View Details
                             <span class="transition-transform group-hover:translate-x-1">→</span>
                         </span>
@@ -291,14 +281,14 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════════
-     5. NEW: HOW WE WORK — 4-Step Process Section
+     5. HOW WE WORK — 4-Step Process Section (Clean Light Theme)
 ═══════════════════════════════════════════════════════════ --}}
 <section class="py-20 md:py-28 bg-white relative overflow-hidden border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div class="text-center mb-16">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-700 text-xs font-bold tracking-widest uppercase mb-3">
-                Transparent Execution
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
+                Simple & Transparent
             </span>
             <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-3">
                 हमारी कार्यप्रणाली <span class="text-[#0f2147]">/ How We Work</span>
@@ -308,12 +298,12 @@
             </p>
         </div>
 
-        {{-- Process Steps --}}
+        {{-- Process Steps Grid --}}
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
             {{-- Step 1 --}}
-            <div class="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-amber-400 transition-all hover:shadow-lg group">
-                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2147] to-[#1a3567] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
                     01
                 </div>
                 <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">आवश्यकता परामर्श</h4>
@@ -322,8 +312,8 @@
             </div>
 
             {{-- Step 2 --}}
-            <div class="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-amber-400 transition-all hover:shadow-lg group">
-                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2147] to-[#1a3567] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
                     02
                 </div>
                 <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">पारदर्शी दर व योजना</h4>
@@ -332,8 +322,8 @@
             </div>
 
             {{-- Step 3 --}}
-            <div class="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-amber-400 transition-all hover:shadow-lg group">
-                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2147] to-[#1a3567] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
                     03
                 </div>
                 <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">समयबद्ध निष्पादन</h4>
@@ -342,8 +332,8 @@
             </div>
 
             {{-- Step 4 --}}
-            <div class="p-6 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-amber-400 transition-all hover:shadow-lg group">
-                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2147] to-[#1a3567] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
                     04
                 </div>
                 <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">निरंतर सहायता</h4>
@@ -357,28 +347,27 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════════
-     6. ABOUT / WHO WE ARE (Deep Storytelling & Prestige)
+     6. ABOUT / WHO WE ARE (Deep Storytelling & Heritage)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-[#f8fafc] relative overflow-hidden border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-[#f8fafc] relative overflow-hidden border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             
             {{-- Image with Modern Floating Badges (5 cols) --}}
             <div class="lg:col-span-5 relative">
-                <div class="relative mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-2xl">
+                <div class="relative mx-auto rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-white p-2">
                     <img 
                         src="/images/services/about-team.jpg" 
                         alt="Trade of Anand Leadership & Operations" 
-                        class="w-full aspect-[4/3] object-cover"
+                        class="w-full aspect-[4/3] object-cover rounded-xl"
                         loading="lazy"
                     >
-                    <div class="absolute inset-0 bg-gradient-to-tr from-[#0f2147]/20 to-transparent"></div>
                 </div>
 
                 {{-- Floating Experience Card --}}
-                <div class="absolute -bottom-8 -right-4 sm:-right-8 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 max-w-xs hidden sm:block animate-float">
-                    <div class="flex items-center gap-4">
-                        <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 text-slate-950 flex items-center justify-center font-heading font-extrabold text-2xl shadow-md">
+                <div class="absolute -bottom-6 -right-4 sm:-right-6 bg-white p-4 sm:p-5 rounded-2xl shadow-xl border border-slate-200 max-w-xs hidden sm:block animate-float">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-12 h-12 rounded-xl bg-[#0f2147] text-amber-400 flex items-center justify-center font-heading font-extrabold text-2xl shadow-md">
                             15+
                         </div>
                         <div>
@@ -391,7 +380,7 @@
 
             {{-- Text & Vision (7 cols) --}}
             <div class="lg:col-span-7">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-600 text-xs font-bold tracking-widest uppercase mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Legacy of Excellence
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-6 leading-tight">
@@ -442,33 +431,29 @@
 </section>
 
 {{-- ═══════════════════════════════════════════════════════════
-     7. POULTRY & LOGISTICS INTEGRATION (Dark Mesh Section)
-     Inspired by smartindiadetective.in High-Tech UI
+     7. POULTRY & LOGISTICS INTEGRATION (Clean Executive Slate)
+     (User requested NO heavy dark themes, so clean corporate styling)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-[#050a16] text-white relative overflow-hidden border-t border-slate-800">
-    {{-- Ambient Neon Orbs --}}
-    <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-blue-600/15 blur-3xl pointer-events-none"></div>
-    <div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-amber-500/15 blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
             <div class="lg:col-span-5">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/10 border border-amber-400/25 text-amber-300 text-xs font-bold tracking-widest uppercase mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Industry Leadership
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-white mt-2 mb-6 leading-tight">
+                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-6 leading-tight">
                     Poultry Integration Feed Delivery में <br>
-                    <span class="text-amber-400">विश्वसनीय अनुभव</span>
+                    <span class="text-blue-700">विश्वसनीय अनुभव</span>
                 </h2>
-                <p class="text-slate-300 text-base sm:text-lg mb-8 hindi leading-relaxed">
+                <p class="text-slate-600 text-base sm:text-lg mb-8 hindi leading-relaxed">
                     2016 से निरंतर Bihar के प्रमुख पोल्ट्री कंपनियों और किसानों के साथ निर्बाध फीड डिलीवरी, हाई-स्पीड कार्गो मूवमेंट और सुरक्षित फ्रेट प्रबंधन।
                 </p>
-                <div class="p-6 rounded-2xl bg-[#0d162b] border border-slate-700/80 shadow-xl mb-8">
-                    <div class="font-heading text-3xl font-extrabold text-emerald-400 mb-1">100% On-Time Record</div>
-                    <p class="text-xs text-slate-400 hindi m-0 leading-relaxed">सख्त समय-सारणी, जीपीएस ट्रैक्ड फ्लीट और प्रशिक्षित ड्राइवर्स के साथ सुरक्षित परिवहन।</p>
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm mb-8">
+                    <div class="font-heading text-3xl font-extrabold text-emerald-600 mb-1">100% On-Time Record</div>
+                    <p class="text-xs text-slate-500 hindi m-0 leading-relaxed">सख्त समय-सारणी, जीपीएस ट्रैक्ड फ्लीट और प्रशिक्षित ड्राइवर्स के साथ सुरक्षित परिवहन।</p>
                 </div>
-                <a href="{{ route('contact.show') }}" class="btn-accent" id="poultry-team-btn">
+                <a href="{{ route('contact.show') }}" class="btn-primary" id="poultry-team-btn">
                     लॉजिस्टिक्स साझेदारी हेतु संपर्क करें →
                 </a>
             </div>
@@ -477,15 +462,15 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     @foreach($poultry as $client)
                     @if($client['confirmed'])
-                    <div class="p-6 rounded-2xl bg-[#0b1324] border border-slate-800 hover:border-amber-400/40 transition-all hover:-translate-y-1 shadow-lg">
+                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all">
                         <div class="flex items-center justify-between mb-3">
-                            <span class="text-xs font-bold text-amber-400 uppercase tracking-wider">{{ $client['year'] }}</span>
-                            <span class="inline-flex items-center gap-1.5 text-[0.65rem] font-bold text-emerald-400 uppercase">
-                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span> Active
+                            <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">{{ $client['year'] }}</span>
+                            <span class="inline-flex items-center gap-1.5 text-[0.68rem] font-bold text-emerald-700 uppercase bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active
                             </span>
                         </div>
-                        <h4 class="font-heading text-xl font-bold text-white mb-2">{{ $client['company'] }}</h4>
-                        <p class="text-xs text-slate-400 hindi leading-relaxed m-0">Integration Feed Transport & Distribution Network across Bihar</p>
+                        <h4 class="font-heading text-lg font-bold text-slate-900 mb-2">{{ $client['company'] }}</h4>
+                        <p class="text-xs text-slate-500 hindi leading-relaxed m-0">Integration Feed Transport & Distribution Network across Bihar</p>
                     </div>
                     @endif
                     @endforeach
@@ -499,10 +484,10 @@
 {{-- ═══════════════════════════════════════════════════════════
      8. WHY CHOOSE US (Feature Value Proposition)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-3xl mx-auto mb-16">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-700 text-xs font-bold tracking-widest uppercase mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                 Why Partner With Us
             </span>
             <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-4">
@@ -515,8 +500,8 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($why_choose as $index => $item)
-            <div class="p-8 rounded-2xl bg-[#f8fafc] border border-slate-200 hover:border-amber-400 hover:shadow-xl transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0f2147] to-[#040814] text-amber-400 flex items-center justify-center font-heading font-extrabold text-2xl shadow-md mb-6">
+            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300">
+                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 flex items-center justify-center font-heading font-extrabold text-2xl shadow-md mb-6">
                     {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                 </div>
                 <h3 class="font-heading text-xl font-bold text-slate-900 mb-3 hindi">{{ $item['title'] }}</h3>
@@ -530,11 +515,11 @@
 {{-- ═══════════════════════════════════════════════════════════
      9. LEADERSHIP SPOTLIGHT (Executive Profile Cards)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-[#f8fafc] border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-600 text-xs font-bold tracking-widest uppercase mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Leadership & Vision
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
@@ -551,8 +536,8 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($team as $idx => $member)
-            <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200/80 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-                <div class="aspect-[4/5] overflow-hidden bg-slate-900 relative">
+            <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+                <div class="aspect-[4/5] overflow-hidden bg-slate-100 relative">
                     <img 
                         src="{{ $member['image'] }}" 
                         alt="{{ $member['name'] }} – {{ $member['designation'] }}" 
@@ -575,10 +560,10 @@
                     <p class="text-xs text-slate-500 mb-4">{{ $member['designation'] }}</p>
 
                     <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
-                        <a href="tel:+91{{ $member['phone'] }}" class="btn-primary text-xs py-2 px-3 flex-1">
+                        <a href="tel:+91{{ $member['phone'] }}" class="btn-primary text-xs py-2 px-3 flex-1 text-center">
                             Call
                         </a>
-                        <a href="https://wa.me/91{{ $member['phone'] }}?text={{ urlencode(config('site.whatsapp_message')) }}" class="btn-whatsapp text-xs py-2 px-3 flex-1" target="_blank">
+                        <a href="https://wa.me/91{{ $member['phone'] }}?text={{ urlencode(config('site.whatsapp_message')) }}" class="btn-whatsapp text-xs py-2 px-3 flex-1 text-center" target="_blank">
                             WhatsApp
                         </a>
                     </div>
@@ -592,11 +577,11 @@
 {{-- ═══════════════════════════════════════════════════════════
      10. GALLERY SHOWCASE (Masonry Grid with Hover Zoom)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-white border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/25 text-blue-700 text-xs font-bold tracking-widest uppercase mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Visual Highlights
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
@@ -613,7 +598,7 @@
 
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             @foreach(array_slice($gallery, 0, 6) as $idx => $img)
-            <div class="group cursor-pointer overflow-hidden aspect-square rounded-2xl relative shadow-sm hover:shadow-xl transition-all">
+            <div class="group cursor-pointer overflow-hidden aspect-square rounded-2xl relative shadow-sm hover:shadow-xl transition-all border border-slate-200 bg-white">
                 <img 
                     src="{{ $img['src'] }}" 
                     alt="{{ $img['alt'] }}" 
@@ -633,12 +618,12 @@
 {{-- ═══════════════════════════════════════════════════════════
      11. FREQUENTLY ASKED QUESTIONS (Modern Accordion)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-24 md:py-32 bg-[#f8fafc] border-t border-slate-200">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
             <div class="lg:col-span-4">
-                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/25 text-amber-600 text-xs font-bold tracking-widest uppercase mb-3">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Clear Answers
                 </span>
                 <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
@@ -647,10 +632,10 @@
                 <p class="text-slate-600 text-base hindi mb-8 leading-relaxed">
                     Trade of Anand की विभिन्न सेवाओं, दरों एवं संपर्क प्रक्रियाओं से संबंधित सामान्य प्रश्न।
                 </p>
-                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
                     <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">कोई अन्य सवाल है?</h4>
                     <p class="text-xs text-slate-500 hindi mb-4">हमारी टीम आपकी सहायता के लिए हमेशा उपलब्ध है।</p>
-                    <a href="tel:+91{{ config('site.phone_primary') }}" class="btn-primary text-xs w-full">
+                    <a href="tel:+91{{ config('site.phone_primary') }}" class="btn-primary text-xs w-full text-center">
                         सीधे बात करें
                     </a>
                 </div>
@@ -658,14 +643,14 @@
 
             <div class="lg:col-span-8 space-y-4" itemscope itemtype="https://schema.org/FAQPage">
                 @foreach($faqs as $index => $faq)
-                <div class="faq-item bg-white rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:border-amber-400" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                <div class="faq-item bg-[#f8fafc] rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:border-blue-500" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <button class="w-full flex justify-between items-center text-left font-semibold text-slate-900 bg-transparent border-0 cursor-pointer gap-4 group" aria-expanded="false" id="faq-q-{{ $index }}">
-                        <span itemprop="name" class="font-heading text-lg sm:text-xl font-bold group-hover:text-[#0f2147] transition-colors hindi">{{ $faq['q'] }}</span>
-                        <div class="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0 group-hover:bg-amber-100 transition-colors">
-                            <svg class="faq-icon w-4 h-4 text-amber-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                        <span itemprop="name" class="font-heading text-lg sm:text-xl font-bold group-hover:text-blue-700 transition-colors hindi">{{ $faq['q'] }}</span>
+                        <div class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-blue-50 transition-colors">
+                            <svg class="faq-icon w-4 h-4 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </div>
                     </button>
-                    <div class="faq-answer pt-4 text-sm sm:text-base text-slate-600 leading-relaxed hindi border-t border-slate-100 mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-answer pt-4 text-sm sm:text-base text-slate-600 leading-relaxed hindi border-t border-slate-200/80 mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p itemprop="text" class="m-0">{{ $faq['a'] }}</p>
                     </div>
                 </div>
@@ -679,12 +664,13 @@
 {{-- Marquee Continuous CSS --}}
 <style>
     @keyframes marqueeScroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
+        0% { transform: translate3d(0, 0, 0); }
+        100% { transform: translate3d(-50%, 0, 0); }
     }
     .marquee-track {
         display: flex;
         width: max-content;
+        will-change: transform;
         animation: marqueeScroll 25s linear infinite;
     }
     .marquee-track:hover {

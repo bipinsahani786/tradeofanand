@@ -50,10 +50,10 @@ return [
     |--------------------------------------------------------------------------
     */
     'stats' => [
-        ['value' => '15+', 'label' => 'वर्षों का व्यावसायिक अनुभव', 'sublabel' => 'Tyre Agency since 2011'],
-        ['value' => '6',   'label' => 'Business Services'],
-        ['value' => '6+',  'label' => 'Poultry Companies Served'],
-        ['value' => 'Samastipur', 'label' => 'Bihar'],
+        ['value' => '15+',  'label' => 'वर्षों का व्यावसायिक अनुभव', 'sublabel' => 'Established Since 2011'],
+        ['value' => '6',    'label' => 'Business Verticals',       'sublabel' => 'Complete Solutions'],
+        ['value' => '6+',   'label' => 'Poultry Companies Served', 'sublabel' => 'Integration Logistics'],
+        ['value' => '100%', 'label' => 'समस्त बिहार नेटवर्क',     'sublabel' => 'HQ: Samastipur, Bihar'],
     ],
 
     /*

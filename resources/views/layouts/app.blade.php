@@ -24,13 +24,13 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 </head>
-<body class="font-body text-[var(--color-text)] bg-white antialiased">
+<body class="font-body text-[var(--color-text)] bg-white antialiased overflow-x-hidden w-full max-w-full pb-14 lg:pb-0">
 
     {{-- Header (includes top announcement bar) --}}
     @include('partials.header')
 
     {{-- Main content --}}
-    <main id="main-content">
+    <main id="main-content" class="overflow-x-hidden w-full max-w-full">
         @yield('content')
     </main>
 

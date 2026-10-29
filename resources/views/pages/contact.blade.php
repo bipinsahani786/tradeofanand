@@ -15,8 +15,8 @@
     </div>
 </div>
 
-<section class="py-20 md:py-28">
-    <div class="max-w-6xl mx-auto px-6">
+<section class="py-16 sm:py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
 
         {{-- Success message --}}
         @if(session('success'))
@@ -80,7 +80,7 @@
             </div>
 
             {{-- Right: Form --}}
-            <div class="border border-[var(--color-line)] p-8">
+            <div class="border border-[var(--color-line)] p-5 sm:p-8">
                 <h2 class="font-heading text-3xl font-bold text-[var(--color-ink)] mb-2">Enquiry Form</h2>
                 <p class="text-sm text-[var(--color-muted)] mb-6 hindi">अपनी जानकारी भरें, हम जल्द ही संपर्क करेंगे।</p>
 
