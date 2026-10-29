@@ -269,7 +269,13 @@
     /* ──────────────────────────────────────────────────────────────────── */
     /*  BUTTONS                                                              */
     /* ──────────────────────────────────────────────────────────────────── */
-    .btn-base {
+    .btn-base,
+    .btn-primary,
+    .btn-accent,
+    .btn-cta-pill,
+    .btn-outline,
+    .btn-white,
+    .btn-whatsapp {
         display: inline-flex;
         align-items: center;
         justify-content: center;
@@ -292,7 +298,13 @@
     }
 
     /* Shimmer overlay shared by premium buttons */
-    .btn-base::before {
+    .btn-base::before,
+    .btn-primary::before,
+    .btn-accent::before,
+    .btn-cta-pill::before,
+    .btn-outline::before,
+    .btn-white::before,
+    .btn-whatsapp::before {
         content: '';
         position: absolute;
         inset: 0;
@@ -306,12 +318,17 @@
         transition: transform 0.55s ease;
         pointer-events: none;
     }
-    .btn-base:hover::before {
+    .btn-base:hover::before,
+    .btn-primary:hover::before,
+    .btn-accent:hover::before,
+    .btn-cta-pill:hover::before,
+    .btn-outline:hover::before,
+    .btn-white:hover::before,
+    .btn-whatsapp:hover::before {
         transform: translateX(110%);
     }
 
     .btn-primary {
-        @apply btn-base;
         background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
         color: #ffffff;
         box-shadow: 0 4px 15px rgba(15, 33, 71, 0.30);
@@ -328,7 +345,6 @@
     }
 
     .btn-accent {
-        @apply btn-base;
         background: linear-gradient(135deg, var(--color-accent-dark) 0%, var(--color-accent) 60%, var(--color-accent-light) 100%);
         color: #ffffff;
         box-shadow: 0 4px 15px rgba(212, 146, 42, 0.32);
@@ -343,7 +359,6 @@
 
     /* Pill CTA variant (wide, rounded) */
     .btn-cta-pill {
-        @apply btn-base;
         border-radius: var(--radius-pill);
         padding: 0.875rem 2.5rem;
         font-size: 1rem;
@@ -359,7 +374,6 @@
     }
 
     .btn-outline {
-        @apply btn-base;
         background: transparent;
         border-color: var(--color-primary);
         color: var(--color-primary);
@@ -372,7 +386,6 @@
     }
 
     .btn-white {
-        @apply btn-base;
         background: #ffffff;
         color: var(--color-primary);
         border-color: #ffffff;
@@ -385,7 +398,6 @@
     }
 
     .btn-whatsapp {
-        @apply btn-base;
         background: linear-gradient(135deg, #1a9e46 0%, var(--color-whatsapp) 100%);
         color: #ffffff;
         box-shadow: 0 4px 15px rgba(22, 163, 74, 0.32);
