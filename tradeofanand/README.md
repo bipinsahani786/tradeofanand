@@ -1,58 +1,205 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TRADE OF ANAND (ANAND GROUP)
+> **Formerly known as M/S Sanjeev Kumar Suman**  
+> *भरोसेमंद सेवा • उचित दर • बेहतर मार्गदर्शन*  
+> Mushrigharari, Samastipur, Bihar
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A production-ready, SEO-optimized business website built with **Laravel 12, Blade, Tailwind CSS, and Vanilla JavaScript**.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📋 Table of Contents
+1. [Overview](#-overview)
+2. [Tech Stack](#-tech-stack)
+3. [Features & Architecture](#-features--architecture)
+4. [Installation & Setup](#-installation--setup)
+5. [Configuration & Content Editing](#-configuration--content-editing)
+6. [Routes & SEO](#-routes--seo)
+7. [Contact Form & Email Notifications](#-contact-form--email-notifications)
+8. [Asset & Photography Requirements](#-asset--photography-requirements)
+9. [Deployment & Production Tips](#-deployment--production-tips)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+---
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 🏢 Overview
 
-## Learning Laravel
+Trade of Anand is a multi-service business platform operating in Samastipur, Bihar:
+- **Transport & Logistics:** Specialized in Poultry Feed Integration Delivery, commercial transport, and mini-truck services.
+- **Anand Insurance Services:** Life, health, motor, commercial vehicle insurance planning, and policy renewal.
+- **Anand Medicine:** Wholesale distributor supplying ethical and generic medicines to medical stores and hospitals.
+- **Anand Bhavan Rental:** Residential, commercial spaces, shops, and offices for rent in Samastipur.
+- **Saurav Tyre Agency:** Authorized Apollo Tyres dealer (serving since 2011).
+- **Vehicle Pollution Testing Centre:** Government-authorized computer PUC emission certification center (since 2018).
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🛠 Tech Stack
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- **Backend:** Laravel 12.x (PHP 8.2+)
+- **Templating:** Laravel Blade with modular layouts and partials
+- **Frontend / Styling:** Tailwind CSS via Vite (design token system with solid colors, zero gradients, maximum 4px radius)
+- **Scripting:** Pure Vanilla JS (mobile navigation, FAQ accordion, gallery filter tabs, modal lightbox, scroll reveal)
+- **Database:** MySQL / SQLite for contact enquiries table (`enquiries`)
+- **Typography:** Barlow Condensed (Headings), Mukta & Noto Sans Devanagari (Body / Hindi support)
 
-## Agentic Development
+---
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## 🚀 Installation & Setup
 
+### 1. Prerequisites
+- PHP 8.2 or higher (with `pdo`, `mbstring`, `gd`, `openssl`, `xml` extensions enabled)
+- Composer
+- Node.js (v18+) and npm
+- MySQL Server (or SQLite)
+
+### 2. Clone & Install Dependencies
 ```bash
-composer require laravel/boost --dev
+# Navigate to project folder
+cd tradeofanand
 
-php artisan boost:install
+# Install PHP dependencies
+composer install
+
+# Install NPM packages
+npm install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 3. Environment Setup
+```bash
+# Copy example env if not present
+cp .env.example .env
 
-## Contributing
+# Generate application key
+php artisan key:generate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Configure `.env` database parameters:
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=tradeofanand
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-## Code of Conduct
+### 4. Database Migration
+```bash
+php artisan migrate
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 5. Build Assets
+```bash
+# Compile for production
+npm run build
 
-## Security Vulnerabilities
+# Or run Vite dev server for hot reload
+npm run dev
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 6. Serve Locally
+```bash
+php artisan serve
+```
+Visit: [http://localhost:8000](http://localhost:8000)
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## ⚙ Configuration & Content Editing
+
+All business data (phone numbers, addresses, emails, team members, services, timeline, FAQs, gallery entries) is cleanly centralized in a single configuration file:
+
+📁 **`config/site.php`**
+
+To update business details:
+- **Phone / Email / Address:** Update `phone_primary`, `phone_abhinav`, `email_primary`, `address` in `config/site.php`.
+- **Services:** Modify text, bullet points, processes, or FAQs inside the `'services'` array.
+- **Team Members:** Add or edit bios, phone numbers, or designations under `'team'`.
+- **Poultry Clients Experience:** Add confirmed poultry integration delivery partners under `'poultry_clients'`.
+- **Gallery Items:** Add new photo paths and categories under `'gallery'`.
+
+Changes made to `config/site.php` reflect instantly across all pages without touching Blade template code.
+
+---
+
+## 🌐 Routes & SEO
+
+| Route Name | URL | Description |
+|---|---|---|
+| `home` | `/` | Brand hero, stats strip, services overview, about, poultry timeline, why choose us, team, gallery, FAQs |
+| `services.index` | `/services` | Overview of all 6 Anand Group business divisions |
+| `services.show` | `/services/{slug}` | Individual dedicated landing page for each of the 6 services with custom FAQs and Schema |
+| `contact.show` | `/contact` | Contact details, phone directory, Google Maps embed, and enquiry form |
+| `team.show` | `/team` | Chairman Sanjeev Kumar Suman feature, leadership cards, associations, business journey timeline |
+| `gallery.show` | `/gallery` | Filterable photo gallery (by category) + accessible lightbox modal |
+| `privacy` | `/privacy-policy` | Comprehensive bilingual Privacy Policy |
+| `terms` | `/terms` | Commercial terms and conditions |
+| `sitemap` | `/sitemap.xml` | Dynamic XML sitemap for Google Search Console |
+| `robots` | `/robots.txt` | Crawler directives allowing indexation and linking sitemap |
+
+### SEO Features Implemented:
+- Unique page `<title>` (≤ 60 chars) and meta description (≤ 155 chars)
+- Canonical URLs on every page
+- Open Graph and Twitter Card tags
+- Comprehensive JSON-LD Structured Data:
+  - `Organization` & `LocalBusiness` on Homepage
+  - `Service` & `FAQPage` on Service detail pages
+  - `Person` schema on Team page
+- Breadcrumb navigation with schema
+- Proper heading hierarchy (`h1` -> `h2` -> `h3`)
+- Mobile viewport optimization with sticky Call / WhatsApp CTAs
+
+---
+
+## 📬 Contact Form & Email Notifications
+
+1. **Spam Protection:** Built-in honeypot field (`honeypot`) silently filters bot submissions.
+2. **Rate Limiting:** Throttled to 5 requests per minute per IP via Laravel's `throttle:5,1` middleware.
+3. **Database Storage:** Stored in the `enquiries` table with name, phone, email, service, message, IP, and status.
+4. **Email Notification:** Automatically triggers `App\Mail\EnquiryNotification` to `config('site.email_primary')` with quick action buttons to Call or WhatsApp the lead directly from the email.
+5. **Graceful Degradation:** If email sending fails or SMTP credentials are not yet configured in `.env`, the form logs the exception silently and presents the user with a confirmation message so customer inquiries are never lost.
+
+To configure production email sending, update `.env`:
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+MAIL_ENCRYPTION=tls
+MAIL_FROM_ADDRESS="sanjeevksuman7@gmail.com"
+MAIL_FROM_NAME="Trade of Anand"
+```
+
+---
+
+## 📸 Asset & Photography Requirements
+
+Placeholders are currently rendered in `public/images/`. Refer to [public/images/README.md](public/images/README.md) for detailed image dimensions and specifications:
+- **Chairman Portrait:** `public/images/team/sanjeev-kumar-suman.jpg` (4:5)
+- **Leadership Team:** `public/images/team/` (Abhinav Anand, Keshav Anand, Anmol Anand)
+- **Service Photos:** `public/images/services/` (6 photos)
+- **Gallery Images:** `public/images/gallery/` (12 photos)
+- **Social Sharing Banner:** `public/images/og/og-image.jpg` (1200×630)
+
+---
+
+## 🚀 Deployment & Production Tips
+
+1. **Optimize Laravel:**
+   ```bash
+   php artisan config:cache
+   php artisan route:cache
+   php artisan view:cache
+   ```
+2. **Build Production Assets:**
+   ```bash
+   npm run build
+   ```
+3. **Web Server Configuration (Nginx / Apache):**
+   - Ensure document root points to `tradeofanand/public`
+   - Enable gzip / brotli compression for static assets
+   - Force HTTPS and redirect `www` to non-`www` (or vice versa)
+
+---
+
+© Trade of Anand. All Rights Reserved.

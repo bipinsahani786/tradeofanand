@@ -1,9 +1,253 @@
-@import 'tailwindcss';
+/* ── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Mukta:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap');
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+@import "tailwindcss";
+
+@source "../views";
+@source "../../app";
+
+:root {
+    --color-ink:       #12202F;
+    --color-primary:   #1F3A5F;
+    --color-accent:    #C8861A;
+    --color-bg:        #FFFFFF;
+    --color-bg-soft:   #F8F7F4;
+    --color-line:      #E2DFD8;
+    --color-text:      #2B3440;
+    --color-muted:     #6B7280;
+    --color-whatsapp:  #1FA855;
+
+    --font-heading: 'Barlow Condensed', 'Archivo', sans-serif;
+    --font-body:    'Mukta', 'Noto Sans Devanagari', sans-serif;
+
+    --radius-btn: 3px;
+    --radius-none: 0px;
+}
 
 @theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-ink:       #12202F;
+    --color-primary:   #1F3A5F;
+    --color-accent:    #C8861A;
+    --color-bg:        #FFFFFF;
+    --color-bg-soft:   #F8F7F4;
+    --color-line:      #E2DFD8;
+    --color-text:      #2B3440;
+    --color-muted:     #6B7280;
+    --color-whatsapp:  #1FA855;
+
+    --font-heading: 'Barlow Condensed', 'Archivo', sans-serif;
+    --font-body:    'Mukta', 'Noto Sans Devanagari', sans-serif;
+
+    --radius-btn: 3px;
+    --radius-none: 0px;
+}
+
+/* ── Base Layer (Overridable by utilities) ────────────────────────────────── */
+@layer base {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        font-size: 17px;
+    }
+
+    body {
+        font-family: var(--font-body);
+        color: var(--color-text);
+        background-color: var(--color-bg);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-heading);
+        color: var(--color-ink);
+        line-height: 1.15;
+        letter-spacing: -0.01em;
+    }
+
+    p { margin-bottom: 1rem; }
+    p:last-child { margin-bottom: 0; }
+    img { max-width: 100%; height: auto; display: block; }
+    ul, ol { list-style: none; }
+    button, input, select, textarea { font-family: inherit; }
+}
+
+/* ── Hindi Typography ─────────────────────────────────────────────────────── */
+.hindi {
+    font-family: var(--font-body);
+    line-height: 1.8;
+}
+
+/* ── Explicit High-Contrast Button Components ─────────────────────────────── */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff !important;
+    background-color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary) !important;
+    border-radius: var(--radius-btn);
+    text-decoration: none !important;
+    transition: all 180ms ease;
+    cursor: pointer;
+}
+.btn-primary:hover {
+    background-color: #12202F !important;
+    border-color: #12202F !important;
+    color: #ffffff !important;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff !important;
+    background-color: var(--color-whatsapp) !important;
+    border: 1px solid var(--color-whatsapp) !important;
+    border-radius: var(--radius-btn);
+    text-decoration: none !important;
+    transition: all 180ms ease;
+    cursor: pointer;
+}
+.btn-whatsapp:hover {
+    background-color: #178a45 !important;
+    border-color: #178a45 !important;
+    color: #ffffff !important;
+}
+
+.btn-accent {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #ffffff !important;
+    background-color: var(--color-accent) !important;
+    border: 1px solid var(--color-accent) !important;
+    border-radius: var(--radius-btn);
+    text-decoration: none !important;
+    transition: all 180ms ease;
+    cursor: pointer;
+}
+.btn-accent:hover {
+    background-color: #a86c10 !important;
+    color: #ffffff !important;
+}
+
+.btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-primary) !important;
+    background-color: transparent !important;
+    border: 1.5px solid var(--color-primary) !important;
+    border-radius: var(--radius-btn);
+    text-decoration: none !important;
+    transition: all 180ms ease;
+    cursor: pointer;
+}
+.btn-outline:hover {
+    background-color: var(--color-primary) !important;
+    color: #ffffff !important;
+}
+
+.btn-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.4rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--color-ink) !important;
+    background-color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: var(--radius-btn);
+    text-decoration: none !important;
+    transition: all 180ms ease;
+    cursor: pointer;
+}
+.btn-white:hover {
+    background-color: var(--color-bg-soft) !important;
+}
+
+/* ── Scroll reveal ────────────────────────────────────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 300ms ease, transform 300ms ease;
+}
+.reveal--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ── Mobile body padding for sticky CTA bar ──────────────────────────────── */
+@media (max-width: 1024px) {
+    body { padding-bottom: 56px; }
+}
+
+/* ── Gallery / filter hidden state ───────────────────────────────────────── */
+.gallery-item--hidden { display: none; }
+
+/* ── Lightbox ─────────────────────────────────────────────────────────────── */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(18, 32, 47, 0.95);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+.lightbox--open { display: flex; }
+
+/* ── FAQ accordion ────────────────────────────────────────────────────────── */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease;
+}
+.faq-item--open .faq-answer { max-height: 500px; }
+.faq-item--open .faq-icon { transform: rotate(45deg); }
+.faq-icon { transition: transform 300ms ease; }
+
+/* ── Mobile menu ──────────────────────────────────────────────────────────── */
+.mobile-menu { display: none; }
+.mobile-menu--open { display: block; }
+@media (min-width: 1025px) {
+    .mobile-menu { display: none !important; }
+}
+
+/* ── Timeline dot ─────────────────────────────────────────────────────────── */
+.timeline-dot::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background: var(--color-accent);
 }
