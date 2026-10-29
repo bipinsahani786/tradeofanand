@@ -3,46 +3,46 @@
      High contrast royal navy banner connecting seamlessly with light theme
      ============================================================ --}}
 
-<section class="relative py-16 sm:py-20 bg-gradient-to-r from-[#0f2147] via-[#1a3875] to-[#0f2147] overflow-hidden border-t border-slate-200" aria-label="Call to Action">
+<section class="relative py-12 sm:py-20 bg-gradient-to-r from-[#0f2147] via-[#1a3875] to-[#0f2147] overflow-hidden border-t border-slate-200" aria-label="Call to Action">
     
     {{-- Soft Ambient Lighting (Desktop only) --}}
     <div class="hidden sm:block absolute -top-32 -left-32 w-96 h-96 rounded-full bg-blue-400/15 blur-3xl pointer-events-none" aria-hidden="true"></div>
     <div class="hidden sm:block absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl pointer-events-none" aria-hidden="true"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 sm:gap-10">
             
             {{-- Left Content Column --}}
             <div class="max-w-2xl">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-amber-300 text-xs font-bold tracking-wide uppercase mb-4">
-                    <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-amber-300 text-[0.68rem] sm:text-xs font-bold tracking-wide uppercase mb-3 sm:mb-4">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
                     Direct Support & Free Consultation
                 </div>
 
-                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight hindi mb-4">
+                <h2 class="text-2xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white tracking-tight leading-tight hindi mb-3 sm:mb-4">
                     अपनी आवश्यकता बताइए, <br class="hidden sm:inline">
                     <span class="text-amber-300">
                         हम करेंगे सम्पूर्ण मार्गदर्शन
                     </span>
                 </h2>
 
-                <p class="text-base sm:text-lg text-slate-200 hindi leading-relaxed mb-6">
+                <p class="text-sm sm:text-lg text-slate-200 hindi leading-relaxed mb-4 sm:mb-6">
                     {{ config('site.name') }} — Transport Fleet, Complete Insurance, Wholesale Medicine, Anand Bhavan Commercial Space, Apollo Tyres एवं Govt Authorized PUC Testing का Samastipur में सबसे भरोसेमंद प्रतिष्ठान।
                 </p>
 
                 {{-- Reassurance Points --}}
-                <div class="flex flex-wrap items-center gap-6 text-xs sm:text-sm text-slate-200">
-                    <div class="flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
-                        <span>Zero Spam Guarantee</span>
+                <div class="flex flex-wrap items-center gap-3 sm:gap-6 text-xs sm:text-sm text-slate-200">
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>Zero Spam</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
-                        <span>निःशुल्क व्यावसायिक परामर्श</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>निःशुल्क परामर्श</span>
                     </div>
-                    <div class="flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
-                        <span>त्वरित 2 घंटे में प्रत्युत्तर</span>
+                    <div class="flex items-center gap-1.5">
+                        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-emerald-500/25 text-emerald-400 flex items-center justify-center font-bold text-xs">✓</span>
+                        <span>त्वरित 2 घंटे में समाधान</span>
                     </div>
                 </div>
             </div>

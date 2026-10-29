@@ -204,29 +204,29 @@
 {{-- ═══════════════════════════════════════════════════════════
      4. SERVICES OVERVIEW (The Direct Advantage Grid)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-[#f8fafc] relative">
+<section class="py-14 sm:py-20 md:py-28 bg-[#f8fafc] relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {{-- Section Header --}}
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-14 gap-4 sm:gap-6">
             <div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Our Business Verticals
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2">
                     हमारी प्रमुख सेवाएँ <span class="text-[#0f2147]">/ Core Divisions</span>
                 </h2>
-                <p class="text-slate-600 max-w-2xl mt-3 text-base sm:text-lg hindi leading-relaxed">
+                <p class="text-slate-600 max-w-2xl mt-2 sm:mt-3 text-sm sm:text-lg hindi leading-relaxed">
                     एक छत के नीचे Transport, Insurance, Medicine Wholesale, Commercial Space Rental, Apollo Tyres, और Govt Authorized PUC Testing की सम्पूर्ण सुविधा।
                 </p>
             </div>
-            <a href="{{ route('services.index') }}" class="btn-outline shrink-0 self-start md:self-auto">
+            <a href="{{ route('services.index') }}" class="btn-outline shrink-0 self-start md:self-auto text-xs sm:text-sm">
                 All 6 Services Details →
             </a>
         </div>
 
         {{-- 6 Services Modern Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             @foreach($services as $idx => $srv)
             <div class="group flex flex-col h-full bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 relative">
                 
@@ -247,19 +247,19 @@
 
                     {{-- Tagline Pill on bottom --}}
                     <div class="absolute bottom-4 left-4 right-4">
-                        <span class="inline-block text-xs font-semibold text-amber-300 hindi bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                        <span class="inline-block text-xs font-semibold text-amber-300 hindi bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10 truncate max-w-full">
                             {{ $srv['tagline'] }}
                         </span>
                     </div>
                 </div>
 
                 {{-- Card Content --}}
-                <div class="p-6 sm:p-7 flex-1 flex flex-col justify-between">
+                <div class="p-5 sm:p-7 flex-1 flex flex-col justify-between">
                     <div>
-                        <h3 class="font-heading text-xl sm:text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-700 transition-colors">
+                        <h3 class="font-heading text-lg sm:text-2xl font-bold text-slate-900 mb-2 sm:mb-3 group-hover:text-blue-700 transition-colors">
                             {{ $srv['name'] }}
                         </h3>
-                        <p class="text-sm text-slate-600 hindi leading-relaxed mb-6">
+                        <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed mb-4 sm:mb-6">
                             {{ $srv['short_desc'] }}
                         </p>
                     </div>
@@ -283,62 +283,62 @@
 {{-- ═══════════════════════════════════════════════════════════
      5. HOW WE WORK — 4-Step Process Section (Clean Light Theme)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-white relative overflow-hidden border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-white relative overflow-hidden border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div class="text-center mb-16">
+        <div class="text-center mb-10 sm:mb-16">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                 Simple & Transparent
             </span>
-            <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-3">
+            <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-2 sm:mb-3">
                 हमारी कार्यप्रणाली <span class="text-[#0f2147]">/ How We Work</span>
             </h2>
-            <p class="text-slate-600 text-base sm:text-lg max-w-xl mx-auto hindi">
+            <p class="text-slate-600 text-sm sm:text-lg max-w-xl mx-auto hindi">
                 ग्राहक की आवश्यकता से लेकर समयबद्ध समाधान तक — 4 सरल चरणों में सुरक्षित सेवा।
             </p>
         </div>
 
         {{-- Process Steps Grid --}}
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             
             {{-- Step 1 --}}
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
-                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-lg sm:text-xl flex items-center justify-center mb-4 sm:mb-5 shadow-md">
                     01
                 </div>
-                <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">आवश्यकता परामर्श</h4>
-                <p class="text-xs text-slate-500 uppercase tracking-wide font-bold mb-2">Step 1: Direct Enquiry</p>
-                <p class="text-sm text-slate-600 hindi leading-relaxed m-0">कॉल, WhatsApp या कार्यालय आकर अपनी आवश्यकता साझा करें।</p>
+                <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2 hindi">आवश्यकता परामर्श</h4>
+                <p class="text-[0.68rem] sm:text-xs text-slate-500 uppercase tracking-wide font-bold mb-1.5 sm:mb-2">Step 1: Direct Enquiry</p>
+                <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed m-0">कॉल, WhatsApp या कार्यालय आकर अपनी आवश्यकता साझा करें।</p>
             </div>
 
             {{-- Step 2 --}}
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
-                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-lg sm:text-xl flex items-center justify-center mb-4 sm:mb-5 shadow-md">
                     02
                 </div>
-                <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">पारदर्शी दर व योजना</h4>
-                <p class="text-xs text-slate-500 uppercase tracking-wide font-bold mb-2">Step 2: Custom Quotation</p>
-                <p class="text-sm text-slate-600 hindi leading-relaxed m-0">सटीक मूल्य निर्धारण, उपलब्धता व स्पष्ट नियम-शर्तें तय की जाती हैं।</p>
+                <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2 hindi">पारदर्शी दर व योजना</h4>
+                <p class="text-[0.68rem] sm:text-xs text-slate-500 uppercase tracking-wide font-bold mb-1.5 sm:mb-2">Step 2: Custom Quotation</p>
+                <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed m-0">सटीक मूल्य निर्धारण, उपलब्धता व स्पष्ट नियम-शर्तें तय की जाती हैं।</p>
             </div>
 
             {{-- Step 3 --}}
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
-                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-lg sm:text-xl flex items-center justify-center mb-4 sm:mb-5 shadow-md">
                     03
                 </div>
-                <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">समयबद्ध निष्पादन</h4>
-                <p class="text-xs text-slate-500 uppercase tracking-wide font-bold mb-2">Step 3: Fast Execution</p>
-                <p class="text-sm text-slate-600 hindi leading-relaxed m-0">सख्त समय-सारणी, प्रमाणित गुणवत्ता और तत्परता के साथ कार्य पूर्ण।</p>
+                <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2 hindi">समयबद्ध निष्पादन</h4>
+                <p class="text-[0.68rem] sm:text-xs text-slate-500 uppercase tracking-wide font-bold mb-1.5 sm:mb-2">Step 3: Fast Execution</p>
+                <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed m-0">सख्त समय-सारणी, प्रमाणित गुणवत्ता और तत्परता के साथ कार्य पूर्ण।</p>
             </div>
 
             {{-- Step 4 --}}
-            <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
-                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-xl flex items-center justify-center mb-5 shadow-md">
+            <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-lg transition-all group">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0f2147] text-amber-400 font-heading font-extrabold text-lg sm:text-xl flex items-center justify-center mb-4 sm:mb-5 shadow-md">
                     04
                 </div>
-                <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">निरंतर सहायता</h4>
-                <p class="text-xs text-slate-500 uppercase tracking-wide font-bold mb-2">Step 4: Lifelong Support</p>
-                <p class="text-sm text-slate-600 hindi leading-relaxed m-0">सेवा के बाद भी नियमित फॉलो-अप, रिन्यूअल और सहायता उपलब्ध।</p>
+                <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2 hindi">निरंतर सहायता</h4>
+                <p class="text-[0.68rem] sm:text-xs text-slate-500 uppercase tracking-wide font-bold mb-1.5 sm:mb-2">Step 4: Lifelong Support</p>
+                <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed m-0">सेवा के बाद भी नियमित फॉलो-अप, रिन्यूअल और सहायता उपलब्ध।</p>
             </div>
 
         </div>
@@ -349,9 +349,9 @@
 {{-- ═══════════════════════════════════════════════════════════
      6. ABOUT / WHO WE ARE (Deep Storytelling & Heritage)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-[#f8fafc] relative overflow-hidden border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-[#f8fafc] relative overflow-hidden border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-16 items-center">
             
             {{-- Image with Modern Floating Badges (5 cols) --}}
             <div class="lg:col-span-5 relative">
@@ -383,44 +383,44 @@
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Legacy of Excellence
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-6 leading-tight">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-4 sm:mb-6 leading-tight">
                     एक समूह – अनेक सेवाएँ <br>
                     <span class="text-[#0f2147]">समर्पित नेतृत्व और पारदर्शी कार्यशैली</span>
                 </h2>
 
-                <p class="text-base sm:text-lg text-slate-700 mb-5 hindi leading-relaxed">
+                <p class="text-sm sm:text-lg text-slate-700 mb-4 sm:mb-5 hindi leading-relaxed">
                     <strong>{{ config('site.formerly') }}</strong> के नाम से शुरू हुई यह प्रतिष्ठित यात्रा आज <strong>{{ config('site.name') }}</strong> के रूप में पूरे बिहार में विश्वसनीयता का प्रतीक बन चुकी है। Samastipur, Bihar में व्यावसायिक उत्कृष्टता, समयबद्ध लॉजिस्टिक्स और जन-जन तक स्वास्थ्य व बीमा सुरक्षा पहुँचाने का संकल्प ही हमारा आधार है।
                 </p>
 
-                <p class="text-sm sm:text-base text-slate-600 mb-8 hindi leading-relaxed">
+                <p class="text-xs sm:text-base text-slate-600 mb-6 sm:mb-8 hindi leading-relaxed">
                     2011 में Saurav Tyre Agency की स्थापना से लेकर आज Transport & Logistics, Anand Medicine Wholesale, Anand Bhavan Rental, और Vehicle Pollution Testing तक—हर क्षेत्र में हमने उच्च गुणवत्ता और निष्पक्षता को प्राथमिकता दी है।
                 </p>
 
                 {{-- Quick bullet points --}}
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-                    <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
-                        <span class="text-sm font-semibold text-slate-800 hindi">24×7 समर्पित ग्राहक सेवा और परामर्श</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 sm:mb-8">
+                    <div class="flex items-start gap-2.5 sm:gap-3">
+                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800 hindi">24×7 समर्पित ग्राहक सेवा और परामर्श</span>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
-                        <span class="text-sm font-semibold text-slate-800 hindi">सरकार एवं एसोसिएशन द्वारा मान्यता प्राप्त</span>
+                    <div class="flex items-start gap-2.5 sm:gap-3">
+                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800 hindi">सरकार एवं एसोसिएशन द्वारा मान्यता प्राप्त</span>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
-                        <span class="text-sm font-semibold text-slate-800 hindi">आधुनिक तकनीकी समाधान व त्वरित बिलिंग</span>
+                    <div class="flex items-start gap-2.5 sm:gap-3">
+                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800 hindi">आधुनिक तकनीकी समाधान व त्वरित बिलिंग</span>
                     </div>
-                    <div class="flex items-start gap-3">
-                        <div class="w-6 h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
-                        <span class="text-sm font-semibold text-slate-800 hindi">पारदर्शी एवं उचित मूल्य नीति</span>
+                    <div class="flex items-start gap-2.5 sm:gap-3">
+                        <div class="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">✓</div>
+                        <span class="text-xs sm:text-sm font-semibold text-slate-800 hindi">पारदर्शी एवं उचित मूल्य नीति</span>
                     </div>
                 </div>
 
-                <div class="flex flex-wrap items-center gap-4">
-                    <a href="{{ route('team.show') }}" class="btn-primary" id="about-team-btn">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                    <a href="{{ route('team.show') }}" class="btn-primary w-full sm:w-auto text-center justify-center" id="about-team-btn">
                         हमारी Team से मिलें →
                     </a>
-                    <a href="{{ route('contact.show') }}" class="btn-outline">
+                    <a href="{{ route('contact.show') }}" class="btn-outline w-full sm:w-auto text-center justify-center">
                         कार्यालय का पता व संपर्क
                     </a>
                 </div>
@@ -432,44 +432,43 @@
 
 {{-- ═══════════════════════════════════════════════════════════
      7. POULTRY & LOGISTICS INTEGRATION (Clean Executive Slate)
-     (User requested NO heavy dark themes, so clean corporate styling)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-16 items-start">
             
             <div class="lg:col-span-5">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Industry Leadership
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-6 leading-tight">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-4 sm:mb-6 leading-tight">
                     Poultry Integration Feed Delivery में <br>
                     <span class="text-blue-700">विश्वसनीय अनुभव</span>
                 </h2>
-                <p class="text-slate-600 text-base sm:text-lg mb-8 hindi leading-relaxed">
+                <p class="text-slate-600 text-sm sm:text-lg mb-6 sm:mb-8 hindi leading-relaxed">
                     2016 से निरंतर Bihar के प्रमुख पोल्ट्री कंपनियों और किसानों के साथ निर्बाध फीड डिलीवरी, हाई-स्पीड कार्गो मूवमेंट और सुरक्षित फ्रेट प्रबंधन।
                 </p>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm mb-8">
-                    <div class="font-heading text-3xl font-extrabold text-emerald-600 mb-1">100% On-Time Record</div>
+                <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm mb-6 sm:mb-8">
+                    <div class="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-600 mb-1">100% On-Time Record</div>
                     <p class="text-xs text-slate-500 hindi m-0 leading-relaxed">सख्त समय-सारणी, जीपीएस ट्रैक्ड फ्लीट और प्रशिक्षित ड्राइवर्स के साथ सुरक्षित परिवहन।</p>
                 </div>
-                <a href="{{ route('contact.show') }}" class="btn-primary" id="poultry-team-btn">
+                <a href="{{ route('contact.show') }}" class="btn-primary w-full sm:w-auto text-center justify-center" id="poultry-team-btn">
                     लॉजिस्टिक्स साझेदारी हेतु संपर्क करें →
                 </a>
             </div>
 
             <div class="lg:col-span-7">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                     @foreach($poultry as $client)
                     @if($client['confirmed'])
-                    <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all">
+                    <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:border-blue-500 hover:shadow-md transition-all">
                         <div class="flex items-center justify-between mb-3">
                             <span class="text-xs font-bold text-blue-700 uppercase tracking-wider">{{ $client['year'] }}</span>
                             <span class="inline-flex items-center gap-1.5 text-[0.68rem] font-bold text-emerald-700 uppercase bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active
                             </span>
                         </div>
-                        <h4 class="font-heading text-lg font-bold text-slate-900 mb-2">{{ $client['company'] }}</h4>
+                        <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1 sm:mb-2">{{ $client['company'] }}</h4>
                         <p class="text-xs text-slate-500 hindi leading-relaxed m-0">Integration Feed Transport & Distribution Network across Bihar</p>
                     </div>
                     @endif
@@ -484,28 +483,28 @@
 {{-- ═══════════════════════════════════════════════════════════
      8. WHY CHOOSE US (Feature Value Proposition)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                 Why Partner With Us
             </span>
-            <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-4">
+            <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-3 sm:mb-4">
                 ग्राहकों की पहली पसंद क्यों है Trade of Anand?
             </h2>
-            <p class="text-slate-600 text-base sm:text-lg hindi">
+            <p class="text-slate-600 text-sm sm:text-lg hindi">
                 Samastipur, Bihar में 15+ वर्षों से सत्यनिष्ठा, व्यक्तिगत मार्गदर्शन और समयबद्ध डिलीवरी।
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
             @foreach($why_choose as $index => $item)
-            <div class="p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300">
-                <div class="w-14 h-14 rounded-xl bg-[#0f2147] text-amber-400 flex items-center justify-center font-heading font-extrabold text-2xl shadow-md mb-6">
+            <div class="p-5 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-500 transition-all duration-300">
+                <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-[#0f2147] text-amber-400 flex items-center justify-center font-heading font-extrabold text-xl sm:text-2xl shadow-md mb-4 sm:mb-6">
                     {{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}
                 </div>
-                <h3 class="font-heading text-xl font-bold text-slate-900 mb-3 hindi">{{ $item['title'] }}</h3>
-                <p class="text-sm text-slate-600 hindi leading-relaxed m-0">{{ $item['desc'] }}</p>
+                <h3 class="font-heading text-lg sm:text-xl font-bold text-slate-900 mb-2 sm:mb-3 hindi">{{ $item['title'] }}</h3>
+                <p class="text-xs sm:text-sm text-slate-600 hindi leading-relaxed m-0">{{ $item['desc'] }}</p>
             </div>
             @endforeach
         </div>
@@ -515,26 +514,26 @@
 {{-- ═══════════════════════════════════════════════════════════
      9. LEADERSHIP SPOTLIGHT (Executive Profile Cards)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
             <div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Leadership & Vision
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2">
                     हमारा नेतृत्व मंडल <span class="text-[#0f2147]">/ Executive Team</span>
                 </h2>
-                <p class="text-slate-600 text-base sm:text-lg mt-3 hindi">
+                <p class="text-slate-600 text-sm sm:text-lg mt-2 sm:mt-3 hindi">
                     अनुभवी नेतृत्व के मार्गदर्शन में प्रत्येक व्यवसाय क्षेत्र में उत्कृष्टता और विश्वसनीयता।
                 </p>
             </div>
-            <a href="{{ route('team.show') }}" class="btn-outline shrink-0">
+            <a href="{{ route('team.show') }}" class="btn-outline shrink-0 text-xs sm:text-sm self-start md:self-auto">
                 View Full Team Profiles →
             </a>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-8">
             @foreach($team as $idx => $member)
             <div class="group bg-white rounded-2xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
                 <div class="aspect-[4/5] overflow-hidden bg-slate-100 relative">
@@ -553,11 +552,11 @@
                     </div>
                 </div>
 
-                <div class="p-6">
-                    <h3 class="font-heading text-xl font-bold text-slate-900 mb-1">
+                <div class="p-5 sm:p-6">
+                    <h3 class="font-heading text-lg sm:text-xl font-bold text-slate-900 mb-1">
                         {{ $member['name'] }}
                     </h3>
-                    <p class="text-xs text-slate-500 mb-4">{{ $member['designation'] }}</p>
+                    <p class="text-xs text-slate-500 mb-3 sm:mb-4">{{ $member['designation'] }}</p>
 
                     <div class="pt-3 border-t border-slate-100 flex items-center gap-2">
                         <a href="tel:+91{{ $member['phone'] }}" class="btn-primary text-xs py-2 px-3 flex-1 text-center">
@@ -577,37 +576,37 @@
 {{-- ═══════════════════════════════════════════════════════════
      10. GALLERY SHOWCASE (Masonry Grid with Hover Zoom)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-[#f8fafc] border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 sm:mb-16 gap-4 sm:gap-6">
             <div>
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Visual Highlights
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2">
                     हमारी झलकियाँ <span class="text-[#0f2147]">/ Gallery</span>
                 </h2>
-                <p class="text-slate-600 text-base sm:text-lg mt-3 hindi">
+                <p class="text-slate-600 text-sm sm:text-lg mt-2 sm:mt-3 hindi">
                     हमारे कार्यालय, ट्रांसपोर्ट फ्लीट, अपोलो टायर शोरूम और मेडिकल स्टोर की वास्तविक तस्वीरें।
                 </p>
             </div>
-            <a href="{{ route('gallery.show') }}" class="btn-outline shrink-0">
+            <a href="{{ route('gallery.show') }}" class="btn-outline shrink-0 text-xs sm:text-sm self-start md:self-auto">
                 Explore All 12 Photos →
             </a>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-4">
             @foreach(array_slice($gallery, 0, 6) as $idx => $img)
-            <div class="group cursor-pointer overflow-hidden aspect-square rounded-2xl relative shadow-sm hover:shadow-xl transition-all border border-slate-200 bg-white">
+            <div class="group cursor-pointer overflow-hidden aspect-square rounded-xl sm:rounded-2xl relative shadow-sm hover:shadow-xl transition-all border border-slate-200 bg-white">
                 <img 
                     src="{{ $img['src'] }}" 
                     alt="{{ $img['alt'] }}" 
                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                 >
-                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-all flex flex-col justify-end p-4">
-                    <span class="text-white text-xs font-semibold leading-tight hindi">{{ $img['caption'] }}</span>
-                    <span class="text-amber-300 text-[0.65rem] uppercase font-bold mt-1">Click to view</span>
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent opacity-0 group-hover:opacity-100 transition-all flex flex-col justify-end p-2 sm:p-4">
+                    <span class="text-white text-[0.65rem] sm:text-xs font-semibold leading-tight hindi truncate">{{ $img['caption'] }}</span>
+                    <span class="text-amber-300 text-[0.6rem] uppercase font-bold mt-0.5">View</span>
                 </div>
             </div>
             @endforeach
@@ -618,22 +617,22 @@
 {{-- ═══════════════════════════════════════════════════════════
      11. FREQUENTLY ASKED QUESTIONS (Modern Accordion)
 ═══════════════════════════════════════════════════════════ --}}
-<section class="py-20 md:py-28 bg-white border-t border-slate-200">
+<section class="py-14 sm:py-20 md:py-28 bg-white border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-16 items-start">
             
             <div class="lg:col-span-4">
                 <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-bold tracking-widest uppercase mb-3">
                     Clear Answers
                 </span>
-                <h2 class="font-heading text-3xl sm:text-5xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
+                <h2 class="font-heading text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mt-2 mb-3 sm:mb-4 leading-tight">
                     अक्सर पूछे जाने वाले सवाल
                 </h2>
-                <p class="text-slate-600 text-base hindi mb-8 leading-relaxed">
+                <p class="text-slate-600 text-sm sm:text-base hindi mb-6 sm:mb-8 leading-relaxed">
                     Trade of Anand की विभिन्न सेवाओं, दरों एवं संपर्क प्रक्रियाओं से संबंधित सामान्य प्रश्न।
                 </p>
-                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
-                    <h4 class="font-heading text-lg font-bold text-slate-900 mb-2 hindi">कोई अन्य सवाल है?</h4>
+                <div class="p-5 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 shadow-sm">
+                    <h4 class="font-heading text-base sm:text-lg font-bold text-slate-900 mb-1.5 sm:mb-2 hindi">कोई अन्य सवाल है?</h4>
                     <p class="text-xs text-slate-500 hindi mb-4">हमारी टीम आपकी सहायता के लिए हमेशा उपलब्ध है।</p>
                     <a href="tel:+91{{ config('site.phone_primary') }}" class="btn-primary text-xs w-full text-center">
                         सीधे बात करें
@@ -641,16 +640,16 @@
                 </div>
             </div>
 
-            <div class="lg:col-span-8 space-y-4" itemscope itemtype="https://schema.org/FAQPage">
+            <div class="lg:col-span-8 space-y-3 sm:space-y-4" itemscope itemtype="https://schema.org/FAQPage">
                 @foreach($faqs as $index => $faq)
-                <div class="faq-item bg-[#f8fafc] rounded-2xl border border-slate-200 p-6 shadow-sm transition-all hover:border-blue-500" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <button class="w-full flex justify-between items-center text-left font-semibold text-slate-900 bg-transparent border-0 cursor-pointer gap-4 group" aria-expanded="false" id="faq-q-{{ $index }}">
-                        <span itemprop="name" class="font-heading text-lg sm:text-xl font-bold group-hover:text-blue-700 transition-colors hindi">{{ $faq['q'] }}</span>
-                        <div class="w-8 h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-blue-50 transition-colors">
-                            <svg class="faq-icon w-4 h-4 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <div class="faq-item bg-[#f8fafc] rounded-xl sm:rounded-2xl border border-slate-200 p-4 sm:p-6 shadow-sm transition-all hover:border-blue-500" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="w-full flex justify-between items-center text-left font-semibold text-slate-900 bg-transparent border-0 cursor-pointer gap-3 sm:gap-4 group" aria-expanded="false" id="faq-q-{{ $index }}">
+                        <span itemprop="name" class="font-heading text-base sm:text-xl font-bold group-hover:text-blue-700 transition-colors hindi leading-snug">{{ $faq['q'] }}</span>
+                        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white border border-slate-200 flex items-center justify-center shrink-0 group-hover:bg-blue-50 transition-colors">
+                            <svg class="faq-icon w-3.5 h-3.5 sm:w-4 sm:h-4 text-blue-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
                         </div>
                     </button>
-                    <div class="faq-answer pt-4 text-sm sm:text-base text-slate-600 leading-relaxed hindi border-t border-slate-200/80 mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                    <div class="faq-answer pt-3 sm:pt-4 text-xs sm:text-base text-slate-600 leading-relaxed hindi border-t border-slate-200/80 mt-3 sm:mt-4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p itemprop="text" class="m-0">{{ $faq['a'] }}</p>
                     </div>
                 </div>
